@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+header{
+background-image:url("background.png");
+background-size:cover;
+background-repeat:no-repeat;
+background-attatchment: fixed;
+position: -webkit-sticky;position: sticky;
+   padding: 50px;
+  text-align: center;
+  font-size: 35px;
+position:relative;
+}
+.button{
+background-color:transparent;
+text-align: center;
+display: inline-block;
+border-color:white;
+border-radius: 25px;
+font-size:20px;
+color:white;
+opacity:0.7;
+padding:15px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\2192';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 30px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.center{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+margin-top:27px;
+  opacity:0.8;
+}
+
+h1{
+color:white;
+font-family:Lucida Sans Unicode;
+}
+.bar1,.bar2,.bar3{
+  width: 20px;
+  height: 2px;
+  background-color:black;
+  margin: 6px 0;
+transition:0.2s;
+cursor:pointer;
+border-radius:15px;
+}
+.bar1:hover,.bar2:hover,.bar3:hover
+{
+ width:20px;
+  height: 2px;
+  background-color:black;
+  margin: 8px 0;
+}
+#overlay {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+ #overlay.active {
+  opacity: 0.5;
+  pointer-events: all;
+}
+.img
+{ transition: all 0.3s ease-in-out 0s;
+ }
+ .img:hover { 
+cursor: default; 
+transform: rotate(360deg); 
+transition: all 0.3s ease-in-out 0s; 
+}
+.change .bar1 {
+  -webkit-transform: rotate(-50deg) translate(-5px,1px);
+  transform: rotate(-50deg) translate(-5px,1px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(25deg) translate(-8px,-8px);
+  transform: rotate(25deg) translate(-8px,-8px);
+}
+</style>
+</head>
+<body>
+<header>
+<p style="color:white;text-align:left;font-size:20px;position:fixed;font-family:Lucida Sans Unicode;margin-left:20px">CSI</p>
+<button style="border-radius:100px;background-color:white;border-color:white;float:right;position: -webkit-sticky;position: sticky;" onclick="myFunction(this)">
+ <div  class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div></button>
+<img src="logo.png" alt="logo" class="center img"><br>
+<img src="vac.svg" alt="vacanza'18"style="margin-left:auto;margin-right:auto;height:80px;width:700px;"><br>
+<button class="button" style="margin-top:15px;"><span>REGISTER</span></button>
+<button class="button" style="margin-left:40px;"><span>START QUIZ</span></button>
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+
+</header>
+</body>
+</html>
