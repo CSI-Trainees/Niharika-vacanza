@@ -61,12 +61,18 @@ transition:0.2s;
 cursor:pointer;
 border-radius:15px;
 }
-.bar1:hover,.bar2:hover,.bar3:hover
-{
- width:20px;
-  height: 2px;
-  background-color:black;
-  margin: 8px 0;}
+
+.col:hover .bar1{
+  -webkit-transform: rotate(-45deg) translate(-5px,1px);
+  transform: rotate(-45deg) translate(1px,1px)scale(1.1);
+}
+
+.col:hover .bar2{opacity: 0;}
+
+.col:hover .bar3 {
+  -webkit-transform: rotate(50deg) translate(-8px,-8px);
+  transform: rotate(45deg) translate(-8px,-8px);
+}
 .img
 { transition: all 0.3s ease-in-out 0s;
  }
@@ -74,17 +80,6 @@ border-radius:15px;
 cursor: default; 
 transform: rotate(360deg)scale(1.1); 
 transition: all 0.3s ease-in-out 0s; 
-}
-.change .bar1 {
-  -webkit-transform: rotate(-50deg) translate(-5px,1px);
-  transform: rotate(-50deg) translate(-5px,1px)scale(1.1);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  -webkit-transform: rotate(25deg) translate(-8px,-8px);
-  transform: rotate(25deg) translate(-8px,-8px);
 }
 body{
 margin:0;
@@ -123,7 +118,7 @@ font-size:40px;
 font-width:80px;
   z-index: 1;
 }
-.col-content button:hover {
+.col-content button:hover{
 background-color:white;
 color:black;
 }
@@ -144,7 +139,7 @@ border-radius:5px;font-size:15px;
 color:white;
 display:inline;
 width:150px; height:40px;
-top:10px;}
+}
 .white1{
 width: 88%;
       height: 300px;
@@ -153,6 +148,7 @@ width: 88%;
       position: relative;
       background:white;
 display:block;
+box-shadow: 12px 15px 10px #c8cfda;
 }
 .cont{
 font-size:20px;
@@ -251,7 +247,7 @@ width:100%;
 height:113px;
 top:0;
 z-index:1;}
- .cardcontainericons {
+ .icons {
     display: flex;
     text-align: center;
     margin-top:20px;
