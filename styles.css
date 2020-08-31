@@ -210,7 +210,7 @@ background-color:#297559;}
         transform: scale(1.4);
     }
     100% {
-        transform: scale(1d);
+        transform: scale(1);
     }
 }
 .cardcontainer{
